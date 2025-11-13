@@ -1,0 +1,28 @@
+{
+  "placeholderImages": [
+    {
+      "id": "about-profile",
+      "description": "Profile picture for the about page",
+      "imageUrl": "/images/bj.jpg",
+      "imageHint": "business professional"
+    },
+    {
+      "id": "project-market-expansion",
+      "description": "Market Expansion Strategy project image",
+      "imageUrl": "/images/ms.jpg",
+      "imageHint": "business strategy"
+    },
+    {
+      "id": "project-software-development",
+      "description": "Software development and UI design project image",
+      "imageUrl": "/images/sd.jpg",
+      "imageHint": "software design"
+    },
+    {
+      "id": "project-sales-optimization",
+      "description": "Sales Process Optimization project image",
+      "imageUrl": "/images/digital.jpg",
+      "imageHint": "sales team"
+    }
+  ]
+}
