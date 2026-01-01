@@ -23,10 +23,10 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
       </head>
-      <body className={cn('font-body antialiased flex flex-col min-h-screen bg-background')}>
-        <ThreeCanvas />
-        <div className="relative z-10 flex flex-col min-h-screen">
-          <main className="flex-grow">{children}</main>
+<body className={cn('font-body antialiased flex flex-col min-h-screen bg-background overflow-x-hidden')}>     
+       <ThreeCanvas />
+       <div className="relative z-10 flex flex-col min-h-screen w-full overflow-x-hidden">
+          <main className="flex-grow w-full">{children}</main>
           <Footer />
         </div>
         <Toaster />

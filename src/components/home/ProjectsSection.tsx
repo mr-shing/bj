@@ -11,7 +11,7 @@ export default function ProjectsSection() {
             پروژه‌های برجسته
         </h2>
         <p className="max-w-2xl text-muted-foreground">
-            نگاهی به برخی از موفقیت‌هایی که در مسیر رشد کسب‌وکارها به دست آورده‌am.
+            نگاهی به برخی از موفقیت‌هایی که در مسیر رشد کسب‌وکارها به دست آورده‌ ام.
         </p>
       </div>
 

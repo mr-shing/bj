@@ -22,10 +22,12 @@ const ThreeCanvas = () => {
     camera.position.z = 3.5;
 
     // Renderer
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-    renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    currentMount.appendChild(renderer.domElement);
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); // بهینه‌سازی برای موبایل
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.domElement.style.display = 'block'; // جلوگیری از فاصله زیر canvas
+renderer.domElement.style.touchAction = 'none'; // جلوگیری از تداخل با اسکرول موبایل
+currentMount.appendChild(renderer.domElement);
 
     const baseMaterialProps = {
       metalness: 0,
@@ -161,11 +163,15 @@ const ThreeCanvas = () => {
     animate();
 
     // Handle resize
-    const handleResize = () => {
-      camera.aspect = window.innerWidth / window.innerHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
-    };
+   const handleResize = () => {
+  // به جای window.innerWidth از کلاینت استفاده کنید
+  const width = document.documentElement.clientWidth;
+  const height = window.innerHeight;
+  
+  camera.aspect = width / height;
+  camera.updateProjectionMatrix();
+  renderer.setSize(width, height);
+};
     window.addEventListener('resize', handleResize);
 
     // Cleanup
